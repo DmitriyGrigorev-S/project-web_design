@@ -1,0 +1,183 @@
+.navigation {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation .navigation__toogle {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  z-index: 2;
+}
+@media (min-width: 991px) {
+  .navigation .navigation__toogle {
+    display: none;
+  }
+}
+.navigation .navigation__toogle--fixed {
+  position: fixed;
+}
+.navigation ul.main-menu {
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(11, 81, 136, 0.95);
+}
+@media (min-width: 991px) {
+  .navigation ul.main-menu {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+}
+.navigation ul.main-menu--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation ul.main-menu--open li a:hover{
+  color:yellow;
+  background-color: transparent;
+}
+/*.navigation ul.main-menu--open */
+@media (min-width: 991px) {
+  .navigation ul.main-menu--open {
+    display:inline-block;
+  }
+}
+.navigation ul.main-menu__list li {
+  margin: 0 auto 40px;
+  padding: 0;
+  display: block;
+}
+@media (min-width: 991px) {
+  .navigation ul.main-menu li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /*margin-right: 100px;*/
+  }
+ /* .navigation ul.main-menu li:nth-child(2) {
+    margin-right: 118px;
+  }*/
+  .navigation ul.main-menu li:last-child {
+    margin-right: 0;
+  }
+}
+.navigation a {
+  color: #000000;
+  font-size: 16px;
+  padding: 27px 10px;
+  margin-right: 63px;
+  text-decoration: none;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+/*.navigation a:hover,
+.navigation a:focus,
+.navigation a:active {
+  color: #ffe400;
+}*/
+.burger-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-20%, -50%);
+  -ms-transform: translate(-20%, -50%);
+      transform: translate(-20%, -50%);
+}
+.burger-btn span,
+.burger-btn span:after,
+.burger-btn span:before {
+  position: absolute;
+  background-color: #000;
+  margin-top: -3px;
+  margin-left: -13px;
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.burger-btn:hover span,
+.burger-btn:hover span:after,
+.burger-btn:hover span:before {
+  background-color: #ccc;
+}
+.burger-btn span:after,
+.burger-btn span:before {
+  content: "";
+  display: table;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.burger-btn span:before {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+      transform: translateY(10px);
+}
+.burger-btn span:after {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+}
+.burger-btn-active span {
+  height: 0;
+}
+.burger-btn-active span:before {
+  background-color: #fff;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+      transform-origin: center;
+}
+.burger-btn-active span:after {
+  background-color: #fff;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+      transform-origin: center;
+}
